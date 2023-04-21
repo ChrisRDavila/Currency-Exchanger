@@ -17,19 +17,19 @@ function getRate(currency, type) {
 // UI Logic
 
 function displayExchange(data) {
-  let currencyAmount = document.querySelector('#currency-amount').value;
   let currencyType = document.querySelector('#currency-type').value;
+  let currencyAmount = document.querySelector('#currency-amount').value;
   const rates = data[0];
   const resultRate = rates.conversion_rates[currencyType];
   const resultAmount  = resultRate * currencyAmount;
-  document.querySelector("#show-result").innerHTML = `<p>Your exchange:<p>
-  <p>in ${currencyType} equals ${resultAmount}<p>`;
+  document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
+  <p>in ${data[2]} equals ${resultAmount}<p>`;
 }
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  let currencyAmount = document.querySelector('#currency-amount').value;
   let currencyType = document.querySelector('#currency-type').value; 
+  let currencyAmount = document.querySelector('#currency-amount').value;
   // const errorMessage = document.getElementById("error-message");
   getRate(currencyAmount, currencyType);
 }
