@@ -12,5 +12,6 @@ function getRate(currency) {
   }, function(rateError) {
     printError(rateError);  
   });
-
 }
+
+// UI Logic
