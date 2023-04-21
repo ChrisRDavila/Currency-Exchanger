@@ -34,7 +34,6 @@ function handleFormSubmission(event) {
   event.preventDefault();
   const type = document.querySelector('#currency-type').value; 
   const amount = document.querySelector('#currency-amount').value;
-  // const errorMessage = document.getElementById("error-message");
   getRate(amount, type);
 }
 
@@ -45,4 +44,6 @@ function printError(error) {
 window.addEventListener("load", function() {
   this.document.querySelector("form").addEventListener("submit", handleFormSubmission);
 });
+//WIP, round decimals to 100th and reset values to null after input so can reuse withput browser refresh"
+//WIP finish readme and erase unused files
 
