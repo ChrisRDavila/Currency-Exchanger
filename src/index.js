@@ -22,7 +22,7 @@ function displayExchange(data) {
 
   for(let i=0; i=data[0].length; i++) {
     const rate = rates[i];
-    const resultCurrency = rate.conversion_rates;
+    const resultCurrency = rate.conversion_rates[currencyType]
     const resultAmount  = rate.currencyAmount;
     
     results = `<p>Your exchange:<p>
