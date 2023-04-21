@@ -6,9 +6,9 @@ export default class CurrencyExchange {
       request.addEventListener("loadend",function() {
         const resultCurrency = JSON.parse(this.responseText);
         if (this.status === 200) {
-          resolve([resultCurrency, amount, type]);
+          resolve([resultCurrency, amount, type]);  
         } else {
-          reject([this, resultCurrency, amount, type]);
+          reject([this, resultCurrency, type]);
         }
       });
       request.open("GET", url, true);

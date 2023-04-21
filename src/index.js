@@ -7,10 +7,10 @@ import CurrencyExchange from './exchanger.js';
 
 function getRate(amount, type) {
   let promise = CurrencyExchange.getRate(amount, type);
-  promise.then(function(rateInfo) {
-    displayExchange(rateInfo);
-  }, function(rateError) {
-    printError(rateError);  
+  promise.then(function(data) {
+    displayExchange(data);
+  }, function(error) {
+    printError(error);  
   });
 }
 
@@ -22,6 +22,9 @@ function displayExchange(data) {
   const rates = data[0];
   const resultRate = rates.conversion_rates[currencyType];
   const resultAmount  = resultRate * currencyAmount;
+  // if (currencyType === undefined) {
+  //   printError
+  // }
   document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
   <p>in ${data[2]} equals ${resultAmount}<p>`;
 }
