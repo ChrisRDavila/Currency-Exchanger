@@ -28,10 +28,10 @@ function displayExchange(data) {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const currencyType = document.querySelector('#currency-type').value; 
-  const currencyAmount = document.querySelector('#currency-amount').value;
+  const type = document.querySelector('#currency-type').value; 
+  const amount = document.querySelector('#currency-amount').value;
   // const errorMessage = document.getElementById("error-message");
-  getRate(currencyAmount, currencyType);
+  getRate(amount, type);
 }
 
 function printError(error) {
@@ -41,15 +41,4 @@ function printError(error) {
 window.addEventListener("load", function() {
   this.document.querySelector("form").addEventListener("submit", handleFormSubmission);
 });
-
-
-// for(let i=0; i=data[0].length; i++) {
-  
-  
-//   results += `<p>Your exchange:<p>
-//   <p>in ${currencyType} equals ${resultAmount}<p>`
-// }
-// const showResults = document.querySelector('show-results');
-// showResults.innerHTML = `Here are your results:
-// ${results}`;
 

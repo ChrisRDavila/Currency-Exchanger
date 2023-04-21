@@ -3,7 +3,7 @@ export default class CurrencyExchange {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
       const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`;
-      request.addEventListener("load",function() {
+      request.addEventListener("loadend",function() {
         const resultCurrency = JSON.parse(this.responseText);
         if (this.status === 200) {
           resolve([resultCurrency, amount, type]);
