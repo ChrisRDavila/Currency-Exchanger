@@ -1,4 +1,4 @@
-# (Application Name)
+# (Currency Exchanger)
 
 #### (Brief Description of Application)
 
