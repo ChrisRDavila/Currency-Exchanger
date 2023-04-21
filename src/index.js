@@ -5,8 +5,8 @@ import CurrencyExchange from './exchanger.js';
 
 // Business Logic
 
-function getRate(currency) {
-  let promise = CurrencyExchange.getRate(currency);
+function getRate(currency, type) {
+  let promise = CurrencyExchange.getRate(currency, type);
   promise.then(function(rateInfo) {
     displayExchange(rateInfo);
   }, function(rateError) {
@@ -15,6 +15,24 @@ function getRate(currency) {
 }
 
 // UI Logic
+
+function displayExchange(data) {
+  const rates = data[0];
+  let results = "";
+
+  for(let i=0; i=data[0].length; i++) {
+    const rate = rates[i];
+    const resultCurrency = rate.conversion_rates;
+    const resultAmount  = rate.currencyAmount;
+    
+    results = `<p>Your exchange:<p>
+    <p>in ${resultCurrency} equals ${resultAmount}<p>`
+  }
+  const showResults = document.querySelector('show-results');
+  showResults.innerHTML = `Here are your results:
+  ${results}`;
+
+}
 
 function handleFormSubmission(event) {
   event.preventDefault();
@@ -25,6 +43,6 @@ function handleFormSubmission(event) {
 }
 
 window.addEventListener("load", function() {
-  this.document.querySelector("form").addEventListener("submit", handleFprmSubmission);
+  this.document.querySelector("form").addEventListener("submit", handleFormSubmission);
 })
 
