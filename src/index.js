@@ -22,11 +22,12 @@ function displayExchange(data) {
   const rates = data[0];
   const resultRate = rates.conversion_rates[currencyType];
   const resultAmount  = resultRate * currencyAmount;
-  // if (currencyType === undefined) {
-  //   printError
-  // }
-  document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
-  <p>in ${data[2]} equals ${resultAmount}<p>`;
+  if (rates.conversion_rates[currencyType] === undefined) {
+    document.querySelector('#show-results').innerText = `${data[2]} is not a real country code`
+  } else { 
+    document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
+    <p>in ${data[2]} equals ${resultAmount}<p>`;
+  }  
 }
 
 function handleFormSubmission(event) {
