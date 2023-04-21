@@ -19,7 +19,7 @@
 ## Setup/Installation Requirements
 
 * _Clone file from repository_
-* _add .env file to project, sign up for free key at ExchangeRate-API_
+* _add .env file to project, sign up for account with free key at ExchangeRate-API, grab ypu API key_
 * _add .env file to .gitignore file, make sure to commit.gitignore with all necesary files to ignore ie (.dist, .env, node_modules, coverage if running eslint, .DS_Store if using Mac)
 * _set up you API key in .env as to API_KEY_
 * _if using an API key run $ npm install dotenv-webpack@2.0.0 --save-dev to use the key from .env file_
