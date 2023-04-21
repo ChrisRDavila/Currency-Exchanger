@@ -5,8 +5,8 @@ import CurrencyExchange from './exchanger.js';
 
 // Business Logic
 
-function getRate(currency, type) {
-  let promise = CurrencyExchange.getRate(currency, type);
+function getRate(amount, type) {
+  let promise = CurrencyExchange.getRate(amount, type);
   promise.then(function(rateInfo) {
     displayExchange(rateInfo);
   }, function(rateError) {
@@ -28,8 +28,8 @@ function displayExchange(data) {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  let currencyType = document.querySelector('#currency-type').value; 
-  let currencyAmount = document.querySelector('#currency-amount').value;
+  const currencyType = document.querySelector('#currency-type').value; 
+  const currencyAmount = document.querySelector('#currency-amount').value;
   // const errorMessage = document.getElementById("error-message");
   getRate(currencyAmount, currencyType);
 }
