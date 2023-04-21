@@ -22,11 +22,11 @@ function displayExchange(data) {
 
   for(let i=0; i=data[0].length; i++) {
     const rate = rates[i];
-    const resultCurrency = rate.conversion_rates[currencyType]
-    const resultAmount  = rate.currencyAmount;
+    const resultRate = rate.conversion_rates[currencyType]
+    const resultAmount  = resultRate * currencyAmount
     
     results = `<p>Your exchange:<p>
-    <p>in ${resultCurrency} equals ${resultAmount}<p>`
+    <p>in ${currencyType} equals ${resultAmount}<p>`
   }
   const showResults = document.querySelector('show-results');
   showResults.innerHTML = `Here are your results:
@@ -38,7 +38,7 @@ function handleFormSubmission(event) {
   event.preventDefault();
   let currencyAmount = document.querySelector('#currency-amount').value;
   let currencyType = document.querySelector9('#currency-type').value 
-  const errorMessage = document.getElementById("error-message");
+  // const errorMessage = document.getElementById("error-message");
   getRate(currencyAmount, currencyType);
 }
 
