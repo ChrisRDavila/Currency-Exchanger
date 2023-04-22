@@ -22,7 +22,7 @@ function displayExchange(data) {
   let currencyAmount = document.querySelector('#currency-amount').value;
   const rates = data[0];
   const resultRate = rates.conversion_rates[currencyType];
-  const resultAmount  = resultRate * currencyAmount;
+  const resultAmount  = (resultRate * currencyAmount).toFixed(2);
   if (rates.conversion_rates[currencyType] === undefined) {
     document.querySelector('#show-results').innerText = `${data[2]} is not a real country code`;
     document.querySelector('#currency-type').value = null;
@@ -49,6 +49,5 @@ function printError(error) {
 window.addEventListener("load", function() {
   this.document.querySelector("form").addEventListener("submit", handleFormSubmission);
 });
-//WIP, round decimals to 100th and reset values t
 
 
