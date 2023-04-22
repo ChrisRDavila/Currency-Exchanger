@@ -17,13 +17,14 @@ function getRate(amount, type) {
 // UI Logic
 
 function displayExchange(data) {
-  let currencyType = document.querySelector('#currency-type').value;
+  let currencyInput = document.querySelector('#currency-type').value;
+  let currencyType = currencyInput.toUpperCase();
   let currencyAmount = document.querySelector('#currency-amount').value;
   const rates = data[0];
   const resultRate = rates.conversion_rates[currencyType];
   const resultAmount  = resultRate * currencyAmount;
   if (rates.conversion_rates[currencyType] === undefined) {
-    document.querySelector('#show-results').innerText = `${data[2]} is not a real country code`
+    document.querySelector('#show-results').innerText = `${data[2]} is not a real country code`;
   } else { 
     document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
     <p>in ${data[2]} equals ${resultAmount}<p>`;
