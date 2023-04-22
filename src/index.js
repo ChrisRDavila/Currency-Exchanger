@@ -28,7 +28,7 @@ function displayExchange(data) {
     document.querySelector('#currency-type').value = null;
     document.querySelector('#currency-amount').value = null;
   } else { 
-    document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
+    document.querySelector("#show-results").innerHTML = `<p>Your exchange from ${data[1]}$ USD<p>
     <p>in ${data[2]} equals ${resultAmount}<p>`;
     document.querySelector('#currency-type').value = null;
     document.querySelector('#currency-amount').value = null;
