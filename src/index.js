@@ -25,9 +25,13 @@ function displayExchange(data) {
   const resultAmount  = resultRate * currencyAmount;
   if (rates.conversion_rates[currencyType] === undefined) {
     document.querySelector('#show-results').innerText = `${data[2]} is not a real country code`;
+    document.querySelector('#currency-type').value = null;
+    document.querySelector('#currency-amount').value = null;
   } else { 
     document.querySelector("#show-results").innerHTML = `<p>Your exhange from ${data[1]}$ USD<p>
     <p>in ${data[2]} equals ${resultAmount}<p>`;
+    document.querySelector('#currency-type').value = null;
+    document.querySelector('#currency-amount').value = null;
   }  
 }
 
@@ -45,6 +49,6 @@ function printError(error) {
 window.addEventListener("load", function() {
   this.document.querySelector("form").addEventListener("submit", handleFormSubmission);
 });
-//WIP, round decimals to 100th and reset values to null after input so can reuse withput browser refresh"
-//WIP finish readme and erase unused files
+//WIP, round decimals to 100th and reset values t
+
 
