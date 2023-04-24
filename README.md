@@ -40,5 +40,13 @@ This Application has inputs that will allow the user to choose a country based o
 
 ## Known Bugs
 
+* _country codes will appear in caps on the input bar and if input in lowercase will be changed to uppercase also when calling on API array for conversion rate key values but return will conversion will still print out as lower case if entered in all lowercase or partial lowercase_
+* _no limit set for highest input for USD so impossibly high values can be input but will still recieve response_
+* _to redirect to currency exchanger from IBAN page, have to go back to previous page with browser or reload_
+
+## Acknowledments
+* _link made to https://www.iban.com/currency-codes for IBAN's list of currency codes_
+* _background photo used from shuttershock_
+
 ## License
 [MIT](https://github.com/ChrisRDavila/Currency-Exchanger/blob/main/LICENSE.txt)
