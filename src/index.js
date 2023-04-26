@@ -5,13 +5,13 @@ import CurrencyExchange from './exchanger.js';
 
 // Business Logic
 
-function getRate(amount, type) {
-  let promise = CurrencyExchange.getRate(amount, type);
-  promise.then(function(data) {
-    displayExchange(data);
-  }, function(error) {
-    printError(error);  
-  });
+async function getRate(amount, type) {
+  try {
+    const rate = await CurrencyExchange.getRate(amount, type);
+    displayExchange(rate);
+  } catch(err) {
+    printError(err);  
+  }
 }
 
 // UI Logic
