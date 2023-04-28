@@ -22,16 +22,12 @@ This Application has inputs that will allow the user to choose a country based o
 ## Setup/Installation Requirements
 
 * _Clone file from repository_
-* _add .env file to project, sign up for account with free key at ExchangeRate-API, grab ypu API key_
+* _add .env file to project, sign up for account with free key at ExchangeRate-API, copy API key to clipboard or somewhere safe_
 * _add .env file to .gitignore file, make sure to commit.gitignore with all necesary files to ignore ie (.dist, .env, node_modules, coverage if running eslint, .DS_Store if using Mac)
-* _set up you API key in .env as to API_KEY_
-* _since you'll be using an API key run $ npm install dotenv-webpack@2.0.0 --save-dev to use the key from .env file_
-* _npm install --save-dev style-loader css-loader_
+* _save your API key in .env file like so: API_KEY={place_key_#_here} so it can be read in the response variables API Call_
 * _Install all packages with $ npm install._
-* _When building the project use webpack use $ npm run build_
-* _When starting a development server use $ npm run start_
-* _If Linting JS files in the src folder use $ npm run lint_
-* _When Running tests with Jest use $ npm run test_
+* _build the project webpack with $ npm run build_
+* _start a development server using $ npm run start and view the created project page in your browser_
 * _fill in the inputs according to instructions with the necessary country code and desired US Dollar amount your wish to exchange values for_
 * _if unaware of which country code to use for desired country click the link to a page that will provide them for you_
 * _submit your input and you will recieve a result that will tell you how much your US dollars is worth in your chosen currency_
