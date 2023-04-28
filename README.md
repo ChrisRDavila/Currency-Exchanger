@@ -22,8 +22,9 @@ This Application has inputs that will allow the user to choose a country based o
 ## Setup/Installation Requirements
 
 * _Clone file from repository_
-* _add .env file to project, sign up for account with free key at [ExchangeRate-API](https://www.exchangerate-api.com/docs/overview), copy API key to clipboard or somewhere safe_
-* _add .env file to .gitignore file, make sure to commit.gitignore with all necesary files to ignore ie (.dist, .env, node_modules, coverage if running eslint, .DS_Store if using Mac)
+* _add .env file to project for key storage_
+* _sign up for account with free key at [ExchangeRate-API](https://www.exchangerate-api.com/docs/overview), copy API key to clipboard or somewhere safe_
+* _add .env to .gitignore file, make sure to commit.gitignore with all necesary files to ignore ie (.dist, .env, node_modules, coverage if running eslint, .DS_Store if using Mac) before any other commit if creating repo_
 * _save your API key in .env file setting your API_KEY={place_key_#_here} (where you fill in your api key number in place of the curly bracket example) so it can be read in the response variables API Call_
 * _Install all packages with $ npm install._
 * _build the project webpack with $ npm run build_
