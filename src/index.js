@@ -9,8 +9,8 @@ async function getRate(amount, type) {
   try {
     const rate = await CurrencyExchange.getRate(amount, type);
     displayExchange(rate);
-  } catch(error) {
-    printError(error);  
+  } catch(response) {
+    printError(response);  
   }
 }
 
@@ -36,7 +36,7 @@ function displayExchange(data) {
 }
 
 function printError(error) {
-  document.querySelector('#show-results').innerText = `There was an error accessing our exchange data from our API ${error}.`;
+  document.querySelector('#show-results').innerText = `There was an error accessing your exchange data from exchange rate API ${error}`;
 }
 
 function handleFormSubmission(event) {
