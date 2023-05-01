@@ -4,13 +4,16 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  background-attachment: fixed;
+  height: 200vh;
+  display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 150%;
-  padding: 20px;
-  margin: 10px;
+  padding: 10px;
+  margin: 5px;
 }
 .container {
   background-color: aliceblue;
@@ -30,4 +33,14 @@ body {
 }
 p1 {
   color: red;
+}
+h1 {
+  color: chartreuse;
+  text-align: center;
+}
+pre {
+  color: black;
+  font-style: unset;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 75%;
 }
