@@ -17,7 +17,7 @@
 
 
 ## Description
-This Application has inputs that will allow the user to choose a country based on a country code and a US dollar amount based on input and see what the input amount in US Dollars would be worth in the currency of the choosen country
+This Application has inputs that will allow the user to choose a country based on a country code and a US dollar amount based on input and see what the input amount in US Dollars would be worth in the currency of the choosen country. Code review testing API calls with vanilla js
 
 ## Setup/Installation Requirements
 
